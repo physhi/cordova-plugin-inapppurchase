@@ -233,8 +233,8 @@ public class InAppBillingV3 extends CordovaPlugin {
             pluginResponse.put("orderId", purchase.getOrderId());
             pluginResponse.put("packageName", purchase.getPackageName());
             pluginResponse.put("productId", purchase.getSku());
-            pluginResponse.put("purchaseTime", purchase.getPurchaseTime());
-            pluginResponse.put("purchaseState", purchase.getPurchaseState());
+            pluginResponse.put("date", purchase.getPurchaseTime());
+            pluginResponse.put("state", purchase.getPurchaseState());
             pluginResponse.put("purchaseToken", purchase.getToken());
             pluginResponse.put("signature", purchase.getSignature());
             pluginResponse.put("type", purchase.getItemType());
@@ -370,8 +370,8 @@ public class InAppBillingV3 extends CordovaPlugin {
                 detailsJson.put("orderId", purchase.getOrderId());
                 detailsJson.put("packageName", purchase.getPackageName());
                 detailsJson.put("productId", purchase.getSku());
-                detailsJson.put("purchaseTime", purchase.getPurchaseTime());
-                detailsJson.put("purchaseState", purchase.getPurchaseState());
+                detailsJson.put("date", purchase.getPurchaseTime());
+                detailsJson.put("state", purchase.getPurchaseState());
                 detailsJson.put("purchaseToken", purchase.getToken());
                 detailsJson.put("signature", purchase.getSignature());
                 detailsJson.put("type", purchase.getItemType());
@@ -391,9 +391,9 @@ public class InAppBillingV3 extends CordovaPlugin {
 
   @Override
   public void onActivityResult(int requestCode, int resultCode, Intent intent) {
-    if (!iabHelper.handleActivityResult(requestCode, resultCode, intent)) {
-      super.onActivityResult(requestCode, resultCode, intent);
-    }
+//    if (!iabHelper.handleActivityResult(requestCode, resultCode, intent)) {
+//      super.onActivityResult(requestCode, resultCode, intent);
+//    }
   }
 
 
